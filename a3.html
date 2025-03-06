@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parixit's Blog</title>
+    <link rel="stylesheet" href="A3.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Parixit's Blog</h1>
+        <p>Your daily dose of tech and coding insights</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="about.html">About Us</a></li>
+            
+        </ul>
+    </nav>
+ <!-- About Section with Image Side by Side -->
+ <div class="about-container">
+    <div class="about-text">
+        <h2>About This Blog</h2>
+        <p>Welcome to Parixit's Blog, a platform dedicated to providing insights and knowledge about the latest trends in technology. Here, we explore topics ranging from web development and programming to cybersecurity and machine learning.</p>
+        <p>We aim to build a community of tech enthusiasts who share a passion for learning and innovation. Stay tuned for tutorials, best practices, and discussions that can help you enhance your skills and stay ahead in the fast-paced tech world.</p>
+    </div>
+    <div class="about-image">
+        <img src="https://img.freepik.com/free-photo/html-css-collage-concept_23-2150061955.jpg" alt="Tech Blog Image">
+    </div>
+</div>
+</div>
+<!-- Topics Section -->
+<div class="popular" id="topics">
+    <h2>Popular Topics</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Cybersecurity</li>
+        <li>Machine Learning</li>
+    </ul>
+</div>
+
+
+
+<!-- Table Section -->
+<div class="table">
+    <h2>Recommended Learning Resources</h2>
+    <table border="1">
+        <tr>
+            <th>Resource</th>
+            <th>Type</th>
+            <th>Link</th>
+        </tr>
+        <tr>
+            <td>W3Schools</td>
+            <td>Tutorial</td>
+            <td><a href="https://www.w3schools.com" target="_blank">Visit</a></td>
+        </tr>
+        <tr>
+            <td>MDN Web Docs</td>
+            <td>Documentation</td>
+            <td><a href="https://developer.mozilla.org" target="_blank">Visit</a></td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="form-container">
+    <form id="contactForm" action="A3.html" method="POST">
+      <h2>Contact Us</h2>
+      
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+      </div>
+      
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+      </div>
+      
+      <!-- Phone Field -->
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}">
+      </div>
+      
+      <!-- Message Field -->
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message" ></textarea>
+      </div>
+      
+      <!-- Dropdown for Inquiry Type -->
+      <div class="form-group">
+        <label for="inquiry">Inquiry Type:</label>
+        <select id="inquiry" name="inquiry" placeholder="select type">
+            <option value="" disabled selected>Select type</option>
+            <option value="general">General Inquiry</option>
+          <option value="technical">Technical Support</option>
+          <option value="billing">Billing/Account</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+      <!-- Radio Buttons for Contact Preference -->
+      <div class="form-group">
+        <p>Preferred Contact Method:</p>
+        <label><input type="radio" name="contactPreference" value="email"> Email</label>
+        <label><input type="radio" name="contactPreference" value="phone"> Phone</label>
+      </div>
+      
+      <!-- Checkbox for Agreement -->
+      <div class="form-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="agreement" required> I agree to the <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+      
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+      </form>
+      <p id="formMessage" class="hidden"></p>
+    
+  </div>
+    <footer>
+        <p>&copy; 2025 Parixit's Blog. All rights reserved.</p>
+    </footer>
+
+    
+    <script>
+      
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Data Submitted');
+            document.getElementById('formMessage').textContent = 'Thank you for reaching out! We will get back to you soon.';
+            document.getElementById('formMessage').classList.remove('hidden');
+            document.getElementById('contactForm').reset();
+            });
+    </script>
+</body>
+</html>
